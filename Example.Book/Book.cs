@@ -27,6 +27,11 @@ namespace Example.Book
         {
             return NumberOfPages - NumberOfPagesRead;
         }
-        public int 
+        public static int GetSizeAndReadThePages(int x, int y, int z, int ReadPages, out int NewPages)
+        {
+            NewPages = ReadPages + 10;
+            int size = x * y * z;
+            return size;
+        }
     }
 }

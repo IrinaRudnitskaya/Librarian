@@ -21,7 +21,16 @@ namespace Example.Book
             Console.WriteLine("Количество страниц: " + myFirstBook.NumberOfPages);
             Console.WriteLine("Количество прочитанных страниц: " + myFirstBook.NumberOfPagesRead);
             Console.WriteLine("Количество непрочитанных страниц: " + UnreadPages);
+
+
+            int size = Book.GetSizeAndReadThePages(myFirstBook.Height, myFirstBook.Width, myFirstBook.Lengthwise, myFirstBook.NumberOfPagesRead, out int NewPages);
+            Console.WriteLine("Обновленное количество прочитанных страниц - " + NewPages);
+            Console.WriteLine("Объем книги - " + size);
             Console.ReadLine();
+
+
+            Magazine m = new Magazine("National Geographic", "National Geographic Society");
+            Console.WriteLine(m.ToString());
         }       
     }
 }
