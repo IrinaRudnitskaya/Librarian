@@ -5,7 +5,7 @@ namespace Librarian
     class Program
     {
         static void Main(string[] args)
-        {            
+        {
             Console.WriteLine("Введите -help, чтобы посмотреть меню. Введите -end, чтобы завершить работу.");
             string s = Console.ReadLine();
             if (s.Equals("-help"))
@@ -23,14 +23,18 @@ namespace Librarian
             }
             else if (s.Equals("-end"))
             {
-                Console.WriteLine("Работа приложения завершена");                
+                Console.WriteLine("Работа приложения завершена");
             }
 
         }
 
         static void Menu(string command)
         {
+            switch (command)
+            {
+                case "1":
 
+            }
         }
     }
 }
