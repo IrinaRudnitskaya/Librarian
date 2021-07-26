@@ -13,7 +13,7 @@ namespace Librarian
             if (Console.ReadLine().Equals("-help"))
             {
                 Console.WriteLine("Выберите номер команды:");
-                Console.WriteLine("1. Добавить запись о книге \n" + "2.Добавить запись о журнале \n" + "3. Удалить запись о книге \n" + "4. Удалить запись о журнале \n"
+                Console.WriteLine("1. Добавить запись о книге \n" + "2. Добавить запись о журнале \n" + "3. Удалить запись о книге \n" + "4. Удалить запись о журнале \n"
                     + "5. Изменить данные в записи о книге \n" + "6. Изменить данные в записи о журнале \n" + "7. Просмотреть список существующих записей \n" + "8. Поиск по названию \n" +
                     "Введите -end, чтобы завершить работу.");
                 do
@@ -34,17 +34,28 @@ namespace Librarian
             {
                 case "1":
                     Console.WriteLine("Введите через запятую название книги, автора, код книги, год издания, количество экземпляров, название издательства и жанр");
-                    if (Console.ReadLine() != null)
-                    {
-                        string[] temp = new string[7];
-                        temp = Console.ReadLine().Split(',');                     
-                      //Books.Add(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5], temp[6]);
+                    string data = Console.ReadLine();
+                    if (data != null)
+                    {                       
+                        string[] temp = data.Split(',');
+                        Books NewBook = PrintedEditions.AddEdition(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5], temp[6]);
+                        PrintedEditions.Add(NewBook);
+                        Console.WriteLine(NewBook);
                     }                    
                     break;
                 //case "2":
-                //    Magazines.Add();
+                //    Console.WriteLine("Введите через запятую название журнала, номер издания, код журнала, год издания, количество экземпляров, название издательства и периодичность");
+                //    if (Console.ReadLine() != null)
+                //    {
+                //        string[] temp = new string[7];
+                //        temp = Console.ReadLine().Split(',');
+                //        Magazines.Add(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5], temp[6]);
+                //    }
+                   
                 //    break;
                 //case "3":
+                //    Console.WriteLine("Введите код книги или журнала, который хотите удалить:");
+                    
                 //    Books.Delete();
                 //    break;
                 //case "4":
