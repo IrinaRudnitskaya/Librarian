@@ -8,9 +8,9 @@ namespace Librarian
 {
     public class Books : PrintedEditions
     {
-        public string Genre { get; set; }
-        public string Author { get; set; }
-        public Books(string Name, string Author, string Code, string EditionYear, string Numbers, string Publisher, string Genre): base (Name, Code, EditionYear, Numbers, Publisher)
+        //public string Genre { get; set; }
+        //public string Author { get; set; }
+        public Books(string Name, string Author, string Code, string EditionYear, string Numbers, string Publisher, string Genre): base (Name, Author, Code, EditionYear, Numbers, Publisher, Genre)
         {
             this.Genre = Genre;
             this.Author = Author; 

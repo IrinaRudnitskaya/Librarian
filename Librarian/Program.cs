@@ -33,14 +33,14 @@ namespace Librarian
             switch (command)
             {
                 case "1":
-                    Console.WriteLine("Введите через запятую название книги, автора, код книги, год издания, количество экземпляров, название издательства и жанр");
+                    Console.WriteLine("Введите через запятую без пробелов название книги, автора, код книги, год издания, количество экземпляров, название издательства и жанр");
                     string data = Console.ReadLine();
                     if (data != null)
-                    {                       
+                    {                      
                         string[] temp = data.Split(',');
-                        Books NewBook = PrintedEditions.AddEdition(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5], temp[6]);
-                        PrintedEditions.Add(NewBook);
-                        Console.WriteLine(NewBook);
+                        Books edition = new Books(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5], temp[6]);
+                        PrintedEditions.AddEdition(edition);
+                        Console.WriteLine($"Название: {temp[0]}");
                     }                    
                     break;
                 //case "2":
@@ -75,6 +75,7 @@ namespace Librarian
                 case "-end":
                     Console.WriteLine("Работа приложения завершена");
                     break;
+                    
             }
         }
     }

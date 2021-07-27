@@ -10,7 +10,7 @@ namespace Librarian
     {
         public string EditionNumber { get; set; }
         public string Periodicity { get; set; }
-        public Magazines(string Name, string Code, string EditionYear, string Numbers, string Publisher, string EditionNumber, string Periodicity) : base(Name, Code, EditionYear, Numbers, Publisher)
+        public Magazines(string Name, string Code, string EditionYear, string Numbers, string Publisher, string EditionNumber, string Periodicity) : base(Name, Code, EditionYear, Numbers, Publisher, EditionNumber, Periodicity)
         {
             this.EditionNumber = EditionNumber;
             this.Periodicity = Periodicity;

@@ -8,7 +8,8 @@ namespace Librarian
 {
     class BooksAndMagazinesCollection
     {
-        static public List<PrintedEditions> entryes;
+        public static List<PrintedEditions> entryes = new List<PrintedEditions>();
     }
+
 
 }
